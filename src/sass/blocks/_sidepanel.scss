@@ -1,0 +1,59 @@
+.sidepanel{
+    position: fixed;
+    top: 230px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 340px;
+    z-index: 3;
+    &__divider{
+        width:  3px;
+        height: 70px;
+        background: $main_color1;
+        &.active{
+            transition: .6s all;
+            background: $main_color;
+        }
+    }
+    &__link {
+        svg path{
+           
+                fill: $main_color1;
+
+        }
+        svg{
+            transform: rotate(90deg);
+            width:25px;
+            height:25px;
+         
+        }
+        &.active{
+           
+            svg path{
+                transition: .6s all;
+                fill: $main_color;
+
+        }
+        }
+    }
+    &__text{
+        height: 150px;
+        width: 25px;
+        span{
+            color:$main_color1;
+            transform: rotate(-90deg) translate(-35% , -260%);
+            display: block;
+            width: 150px;
+            font-weight: bold;
+        }
+        &.active{
+            span{
+            transition: .6s all;
+            color: $main_color;
+            }
+         }
+    }
+
+}

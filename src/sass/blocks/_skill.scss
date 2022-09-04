@@ -1,0 +1,59 @@
+.skill{
+    padding-top: 120px;
+    position: relative;
+    br{
+        display: block;
+        content: "";
+        margin-top: 6px;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 400px 670px;
+        grid-template-rows: minmax(245px , auto) minmax(255px , auto) ;
+        grid-auto-rows: minmax(245px , auto) minmax(245px , auto);
+        row-gap: 40px;
+        column-gap: 70px;
+    }
+    &__photo{
+        grid-row: 1/3;
+        img{
+            width: 100%;
+            
+        }
+    }
+    &__descr{
+        padding-top: 5px;
+    }
+    &__divider{
+        width: 60px;
+        height: 3px;
+        margin-bottom: 20px;
+        background-color: $main_color;
+    }
+    &__skills{
+        display: grid;
+        grid-template: repeat(2,minmax(115px ,auto)) /repeat(2,260px);
+        grid-auto-rows: 1fr;
+        column-gap:50px;
+        row-gap: 20px;
+        &-item{
+            display: grid;
+            grid-template-columns: 40px 200px;
+            column-gap:20px
+        }
+    }
+   &__skills-item{
+    position: relative;
+    padding-left: 10px;
+    z-index: 2;
+    @include befor_circle;
+    &:before{
+        top: -10px;
+    }
+   }
+    svg{
+       width: 30px;
+       height: 30px;
+    }
+
+}

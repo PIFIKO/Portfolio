@@ -1,0 +1,289 @@
+@media (max-width: 1439px){
+
+    .sidepanel{
+        display: none;
+    }
+}
+
+
+
+
+@media (max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+    .skill{
+        &__wrapper{
+            grid-template-columns: 400px 535px;
+            column-gap: 25px;
+        }
+        &__skills{
+            column-gap: 22px;
+            grid-template: repeat(2,minmax(115px,auto))/repeat(2,255px);
+        }
+      
+    }
+     .resume{
+        &__wrapper{
+            padding: 60px 10px 0 10px;
+            column-gap: 30px;
+            grid-template-columns: repeat(2,450px);
+        }
+    }
+    .tehnologic{
+        padding: 0;
+        &__wrapper{
+            grid-template-columns: repeat(4,224px);
+        }
+        &__wrapper1{
+            padding: 30px 110px 0 110px;
+            grid-template-columns: repeat(2,344px);
+        }
+    }
+    .portfolio{
+        margin-top: 30px;
+        &__wrapper{
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizonal , .vertical{
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+    .contackts{
+        &__wrapper{
+            grid-template-columns: 320px 500px;
+        }
+        &__form{
+            grid-template: 45px 190px 45px/repeat(2,240px);
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .container{
+        max-width: 720px;
+    }
+
+    .skill{
+        &__wrapper{
+            grid-template-columns: 300px 380px;
+        }
+        &__photo{
+            grid-row: 1;
+        }
+        &__skills{
+            grid-column: 1;
+        }
+    }
+    .resume{
+        &__wrapper{
+            grid-template-columns: repeat(2 ,335px);
+        }
+    }
+    .tehnologic{
+        padding-top: 20px;
+        &__wrapper{
+            grid-template-columns: repeat(3,224px);
+        }
+        &__wrapper1{
+            margin-top: 30px;
+            padding: 0;
+            grid-template-columns: repeat(2,320px);
+        }    
+    }
+    .price{
+        &__wrapper{
+            grid-template-columns: repeat(auto-fit, 350px);
+            padding: 0;
+        }
+    }
+    .contackts{
+        &__wrapper{
+            grid-template-columns: 315px 380px;
+            padding: 0 0px 0 0px
+        }
+        &__form{
+            grid-template: 45px 190px 45px/repeat(2,175px);
+        }
+        &__trigers{
+            column-gap: 20px;
+        }
+        &__btn{
+            font-size: 13px;
+            line-height: 14px;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px){
+    .container{
+        max-width: 540px;
+    }
+    .title{
+       
+        &_fz43{
+            font-size: 28px;
+        }
+    }
+
+    .promo{
+        &__title{
+             line-height: 39px;
+            width: 300px;
+        }
+    }
+    .skill{
+        &__photo{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        padding-top: 50px;
+        &__wrapper{
+            grid-template: 405px auto auto/ 1fr;
+        }
+        &__skills{
+            column-gap: 20px;
+        }
+    }
+    .resume{
+        &__wrapper{
+            grid-template-columns: repeat(2,245px);
+        }
+    }
+   
+    .tehnologic{  
+        &__wrapper{
+            grid-template-columns: repeat(2,252px);
+        }
+        &__wrapper1{
+            padding: 30px 95px 0 95px;
+            grid-template-columns: repeat(1,320px);
+            
+        }
+        &__block{
+            width: 321px;
+        }
+        
+        
+    }
+    .price{
+       
+        &__wrapper{
+           justify-content: center;
+            
+        }
+    }
+    .contackts{
+        padding: 50px 0 90px 0;
+        &__wrapper{
+            grid-template-columns: 300px;
+            justify-content: center;     
+        }
+        &__descr{
+            padding: 10px;
+        }
+        &__form{
+            grid-template: 35px 140px 45px/repeat(2,135px);
+        }
+        &__trigers{
+            column-gap: 20px;
+        }
+        &__btn{
+            font-size: 13px;
+            line-height: 14px;
+        }
+        &__polici{
+            font-size: 10px;
+            line-height: 14px;
+        }
+       
+    }
+    
+}
+
+
+@media (max-width: 576px){
+
+     .container{
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .title{
+        &_fz43{
+            font-size: 26px;
+        }
+    }
+    .hambureger{
+        right: 20px;
+    }
+    .menu{
+        &__block{
+            width: 250px;
+            padding-left: 20px;
+        }
+    }
+    .promo{
+        min-height: 650px;
+        &__btns{
+            margin-top: 32px;
+        }
+    }
+    .skill{
+        padding-top: 25px;
+    
+        &__wrapper{    
+            grid-template: 480px auto auto/1fr; 
+        }
+        &__skills{
+            grid-template: unset;
+        }
+        &__photo {
+            img{
+                // width: 300px;
+            }
+        }
+    }
+    .resume{
+        padding-top: 30px;
+        &__wrapper{
+            padding: 30px 15px 0 15px;
+            grid-template-columns: 304px;
+            justify-content: center
+        }
+    }
+    .tehnologic{  
+        &__wrapper{
+            padding: 0 10px 0 10px;
+            grid-template-columns: repeat(1,300px);
+            justify-content: center
+        }
+        
+        &__wrapper1{
+            padding: 0 10px 0 10px;
+            grid-template-columns: repeat(1,300px);
+            justify-content: center
+        
+        }
+        &__block{
+            width: 300px;
+        }  
+    }
+    .price{
+        padding: 30px 0 0 0;
+        &__wrapper{
+            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit,300px);
+            
+        }
+    }
+   
+}

@@ -1,0 +1,76 @@
+.tehnologic{
+    padding: 120px ;
+    br{
+        display: block;
+        content: "";
+        margin-top: 9px;
+
+    }
+    &__title{
+        text-align: center;
+        position: relative;
+       @include befor_circle;
+       &:before{
+           top: -5px;
+        left:  50%;
+        transform:translateX(-50%) ;
+    }
+    }
+    &__dividers{
+        width: 60px;
+        height: 3px;
+        margin: 25px auto 0 auto;
+        background-color: $main_color;
+    }
+    &__wrapper{
+        margin: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4 , 270px);
+        grid-template-rows:minmax(270px , auto) minmax(270px , auto);
+        grid-auto-rows: minmax(245px , auto);
+        row-gap: 13px;
+        column-gap: 13px;
+       
+    }
+    &__item{
+        padding: 30px 30px 30px 30px;
+         border: 1px solid #000;
+       
+          
+    }
+     &__jquery{
+             margin: 14px 0 10px 0;
+            }
+    &__wrapper1{
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3 , 350px);
+        grid-template-rows:minmax(70px , auto) minmax(70px , auto);
+        grid-auto-rows: minmax(70px , auto);
+        row-gap: 30px;
+        column-gap: 45px;
+        
+    } 
+    &__desc{
+        position: relative;
+        @include befor_circle;
+    }  
+    &__item-block{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 27px;
+    }
+    &__block{
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+       
+    }
+        &__divider{
+           
+            height: 14px;
+            background:$main_color;
+            border-radius: 4px;
+        }
+}
