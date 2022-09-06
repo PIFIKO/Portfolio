@@ -57,7 +57,10 @@
         &__wrapper{
             grid-template-columns: 320px 500px;
         }
-        &__form{
+        &__form_rus{
+            grid-template: 45px 190px 45px/repeat(2,240px);
+        }
+        &__form_eng{
             grid-template: 45px 190px 45px/repeat(2,240px);
         }
     }
@@ -106,7 +109,10 @@
             grid-template-columns: 315px 380px;
             padding: 0 0px 0 0px
         }
-        &__form{
+        &__form_rus{
+            grid-template: 45px 190px 45px/repeat(2,175px);
+        }
+        &__form_eng{
             grid-template: 45px 190px 45px/repeat(2,175px);
         }
         &__trigers{
@@ -191,7 +197,10 @@
         &__descr{
             padding: 10px;
         }
-        &__form{
+        &__form_rus{
+            grid-template: 35px 140px 45px/repeat(2,135px);
+        }
+        &__form_eng{
             grid-template: 35px 140px 45px/repeat(2,135px);
         }
         &__trigers{

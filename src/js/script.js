@@ -4,8 +4,13 @@ const humburger = document.querySelector('.hambureger'),
       closeElem= document.querySelector('.menu__close'),
       social = document.querySelectorAll('[data-modal]'),
       counters=document.querySelectorAll('.tehnologic__procent'),
-      lines=document.querySelectorAll('.tehnologic__block div');
-    
+      lines=document.querySelectorAll('.tehnologic__block div'),
+      checkbox = document.querySelector('.switch input'),
+      titelEng = document.querySelectorAll('.eng'),
+      titelRus = document.querySelectorAll('.rus'),
+      formEng = document.querySelectorAll('.contackts__form_eng'),
+      formRus = document.querySelectorAll('.contackts__form_rus')
+     
 //divider
       counters.forEach((item , i) =>{
           lines[i].style.width = item.innerHTML;
@@ -61,6 +66,79 @@ social.forEach(e =>{
             e.classList.remove("active");
         }
     
-});
-});
+    });
+  });
+ //checkEng
+ titelEng.forEach(item =>{
+    item.style = "display: block; animation-name: fade; animation-duration: .5s;"
+ });
+ 
+ formEng.forEach(item =>{
+    item.style = "display: grid; animation-name: fade; animation-duration: .5s;"
+ });
+ 
+ checkbox.addEventListener('click', (e)=>{
+    console.log(e.target);
+    if (checkbox.checked ) {
+        titelEng.forEach(item =>{
+            item.style = "display: none; animation-name: fade; animation-duration: .5s;"
+        }) 
+        titelRus.forEach(item =>{
+            item.style = "display: block; animation-name: fade; animation-duration: .5s; "
+        })
+        formEng.forEach(item =>{
+            item.style = "display: none; animation-name: fade; animation-duration: .5s;"
+         });
+        formRus.forEach(item =>{
+        item.style = "display: grid; animation-name: fade; animation-duration: .5s;"
+        }); 
+    }else {
+        titelRus.forEach(item =>{
+            item.style = "display: none; animation-name: fade; animation-duration: .5s;"
+        }) 
+        titelEng.forEach(item =>{
+            item.style = "display: block; animation-name: fade; animation-duration: .5s;"
+         })
+         formEng.forEach(item =>{
+            item.style = "display: grid; animation-name: fade; animation-duration: .5s;"
+         });
+        formRus.forEach(item =>{
+        item.style = "display: none; animation-name: fade; animation-duration: .5s;"
+        }); 
+    }
+ })
+
+    $(document).ready(function(){
+   
+    //Submit
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "puls/mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+            $('.overley').fadeIn('slow');
+            $('.overley').fadeOut('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 2000) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href=#up]").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+    });
 });
